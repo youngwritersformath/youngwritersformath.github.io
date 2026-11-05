@@ -1,0 +1,176 @@
+/* YWM shared styles
+   Palette: deep navy, muted teal, warm ivory, and a restrained amber accent.
+   Edit these variables to change the site's colors. */
+:root {
+    --ink: #20313b;
+    --muted: #62727a;
+    --navy: #203b4a;
+    --teal: #477b78;
+    --teal-light: #e7f0ed;
+    --paper: #f7f5ef;
+    --white: #ffffff;
+    --line: #d9e0dc;
+    --accent: #c58b43;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--paper);
+}
+
+body {
+    max-width: 1040px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: var(--ink);
+    background: var(--white);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+header {
+    padding: 2rem 0 1.25rem;
+    border-bottom: 1px solid var(--line);
+}
+
+header h1 {
+    margin: 0 0 1.25rem;
+    color: var(--navy);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.65rem, 4vw, 2.35rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.45rem 0.8rem;
+    border-radius: 4px;
+    color: var(--navy);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 150ms ease, color 150ms ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--white);
+    background: var(--teal);
+    outline: none;
+}
+
+main {
+    min-height: 55vh;
+    padding: 2.5rem 0 3.5rem;
+}
+
+main h2 {
+    margin: 0 0 1.2rem;
+    color: var(--navy);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    letter-spacing: -0.035em;
+    line-height: 1.2;
+}
+
+main h3 {
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+    color: var(--teal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.15rem;
+}
+
+p {
+    max-width: 72ch;
+}
+
+a {
+    color: #326b68;
+    text-underline-offset: 3px;
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+main > p:first-of-type {
+    font-size: 1.12rem;
+}
+
+article {
+    margin: 1.25rem 0;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--teal);
+    border-radius: 5px;
+    background: #fcfcfa;
+}
+
+article h3 {
+    margin-top: 0;
+}
+
+article p {
+    margin: 0.35rem 0;
+}
+
+footer {
+    padding: 1.2rem 0 2rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+::selection {
+    color: var(--navy);
+    background: #e8d5b6;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 0 1.1rem;
+    }
+
+    header {
+        padding-top: 1.5rem;
+    }
+
+    nav ul {
+        gap: 0.25rem;
+    }
+
+    nav a {
+        padding: 0.4rem 0.55rem;
+    }
+
+    main {
+        padding-top: 2rem;
+    }
+
+    article {
+        padding: 1rem;
+    }
+}
