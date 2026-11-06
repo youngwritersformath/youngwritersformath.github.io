@@ -1,1 +1,0 @@
-# youngwritersformath.github.io
