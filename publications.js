@@ -29,7 +29,7 @@ async function loadPublications() {
                 (publication.author || "Author not listed") +
                 (publication.date ? " · " + publication.date : "");
 
-            const filename = String(publication.file || "");
+            const filename = String(publication.filename || "");
             if (filename && !filename.includes("/") && !filename.includes("\\")) {
                 const pdfUrl = "pdfs/" + encodeURIComponent(filename);
 
